@@ -1,0 +1,32 @@
+// import TableBoots from "./component/TableBoots";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Posts from "./pages/Posts";
+import NotFound from "./pages/NotFound";
+import Header from "./component/header/Header";
+import PostView from "./component/post-view/PostView";
+import PostEdit from "./component/post-edit/PostEdit";
+
+function App() {
+  return (
+    <div className="App text-center text-primary">
+      {/* <TableBoots /> */}
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/posts" component={Posts} />
+          <Route path="/posts/:postid" component={PostView} />
+
+          <Route path="/post/edit/:postid" component={PostEdit} />
+          <Route path="/post/createpost" component={PostEdit} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </Router>
+    </div>
+  );
+}
+
+export default App;
