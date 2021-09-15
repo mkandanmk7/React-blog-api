@@ -1,9 +1,36 @@
 import React from "react";
+import { ReactComponent as Muthu } from "../../assets/undraw_male_avatar_323b.svg";
 
 export const AboutMe = () => {
   return (
-    <div>
-      <h2>About Me</h2>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-6 col-sm-6 col-md-6 col-lg-12 text-center">
+          <h1 className="text-start">
+            <span>
+              <Muthu style={{ Width: "23%", height: "23%" }} />
+            </span>
+            Muthu{" "}
+          </h1>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12 col-sm-12 col-md-12 col-lg-12 text-center pt-2 mt-2">
+          <h3 className="text-start">
+            Name:{" "}
+            <span className="text-info" style={{ color: "black" }}>
+              Muthu
+            </span>
+          </h3>
+          <h3 className="text-start">
+            Education: <span className="text-info">BE CSE</span>
+          </h3>
+          <h3 className="text-start">
+            Current:{" "}
+            <span className="text-info">Full stack web developer !</span>
+          </h3>
+        </div>
+      </div>
     </div>
   );
 };
