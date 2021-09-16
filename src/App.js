@@ -15,7 +15,7 @@ import PostEdit from "./component/post-edit/PostEdit";
 
 function App() {
   return (
-    <div className="App text-center text-primary">
+    <div className="App text-center ">
       {/* <TableBoots /> */}
       <Router>
         <Header />

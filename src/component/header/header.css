@@ -1,0 +1,13 @@
+.nav-item {
+  cursor: pointer;
+}
+.nav-link {
+  color: black !important;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.active {
+  border-bottom: 2px solid greenyellow;
+  filter: drop-shadow(1px 5px 10px);
+}
