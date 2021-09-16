@@ -1,5 +1,10 @@
 // import TableBoots from "./component/TableBoots";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Posts from "./pages/Posts";
@@ -22,6 +27,10 @@ function App() {
 
           <Route path="/post/edit/:postid" component={PostEdit} />
           <Route path="/post/createpost" component={PostEdit} />
+          <Route path="/home">
+            <Redirect to="/" />
+          </Route>
+
           <Route path="*" component={NotFound} />
         </Switch>
       </Router>
