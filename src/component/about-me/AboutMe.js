@@ -1,6 +1,8 @@
 import React from "react";
-import { ReactComponent as Muthu } from "../../assets/undraw_male_avatar_323b.svg";
-
+// import { ReactComponent as Muthu } from "../../assets/undraw_male_avatar_323b.svg";
+// style={{ Width: "23%", height: "23%" }}
+import Rename from "./Rename.jpg";
+console.log(Rename);
 export const AboutMe = () => {
   return (
     <div className="container-fluid">
@@ -8,9 +10,8 @@ export const AboutMe = () => {
         <div className="col-6 col-sm-6 col-md-6 col-lg-12 text-center">
           <h1 className="text-start">
             <span>
-              <Muthu style={{ Width: "23%", height: "23%" }} />
+              <img src={Rename} alt="profile" />
             </span>
-            Muthu{" "}
           </h1>
         </div>
       </div>
