@@ -17,7 +17,8 @@ export const HomeIntro = () => {
                   Learning React Library
                 </h1>
               </div>
-              <div>
+              <div className="text-danger">
+                <h2>React learning</h2>
                 <h3 className="text-start">App is built in React using :</h3>
               </div>
 
