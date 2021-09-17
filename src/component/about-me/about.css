@@ -1,0 +1,13 @@
+.profile {
+  height: 140px;
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: 1px 5px 15px;
+}
+.first {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}

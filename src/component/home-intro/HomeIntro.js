@@ -74,9 +74,9 @@ export const HomeIntro = () => {
           </div>
         </div>
 
-        <div className="col-6 col-sm-6 col-md-6 col-lg-6 imgDiv">
+        {/* <div className="col-6 col-sm-6 col-md-6 col-lg-6 imgDiv">
           <Intro style={{ width: "100%" }} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

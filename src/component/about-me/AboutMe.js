@@ -1,16 +1,16 @@
 import React from "react";
-// import { ReactComponent as Muthu } from "../../assets/undraw_male_avatar_323b.svg";
-// style={{ Width: "23%", height: "23%" }}
+import "./about.css";
+
 import Rename from "./Rename.jpg";
 console.log(Rename);
 export const AboutMe = () => {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid first">
       <div className="row">
         <div className="col-6 col-sm-6 col-md-6 col-lg-12 text-center">
           <h1 className="text-start">
             <span>
-              <img src={Rename} alt="profile" />
+              <img className="profile" src={Rename} alt="profile" />
             </span>
           </h1>
         </div>
@@ -18,7 +18,7 @@ export const AboutMe = () => {
       <div className="row">
         <div className="col-12 col-sm-12 col-md-12 col-lg-12 text-center pt-2 mt-2">
           <h3 className="text-start">
-            Name:{" "}
+            Name:
             <span className="text-info" style={{ color: "black" }}>
               Muthu
             </span>
