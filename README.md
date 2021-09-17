@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://react-blog-all.netlify.app/).
+[Deployed LInk](https://react-blog-all.netlify.app/).
 
 ## Available Scripts
 
