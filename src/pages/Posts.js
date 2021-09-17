@@ -25,12 +25,37 @@ export default function Posts() {
     setUsers(users);
   };
 
+  //createPost operation:
+
+  let createPosts = async () => {
+    const { data: post } = await axios.post(url, {
+      userId: userId,
+      title: title,
+      body: body,
+    });
+    let tempPosts = [...posts];
+    console.log(post);
+  };
+
   //component Did Mount ();
 
   useEffect(() => {
     console.log("Mounted");
     getPosts();
   }, []);
+
+  //delele operation:
+  let deletePost = async (id) => {
+    const { data } = await axios.delete(
+      `https://jsonplaceholder.typicode.com/posts/${id}`
+    );
+    console.log(data);
+    let tempPosts = [...posts];
+    tempPosts = tempPosts.filter((post) => {
+      return post.id !== id;
+    });
+    setPosts(tempPosts);
+  };
 
   //handle change()
   let handleChange = ({ target: { name, value } }) => {
@@ -130,30 +155,35 @@ export default function Posts() {
           {posts.map((post) => {
             return (
               <div
-                className="card col-md-5 mx-auto mx-md-9 my-4"
+                className="card col-md-5 mx-auto mx-md-9 my-4 card-data"
                 style={{ width: "400px" }}
               >
                 <div className="card-body">
-                  <div className="card-title">CardNo:{post.id}</div>
+                  <div className="card-title">
+                    <b>Card:</b>
+                    {post.id}
+                  </div>
                   <h3>{post.title}</h3>
-                  <h5>Body</h5>
-                  <p>{post.body}</p>
+                  <h5>
+                    <b>Body</b>
+                  </h5>
+                  <p className="text-muted">{post.body}</p>
                 </div>
                 <div className="card-footer row">
-                  {/* <button
+                  <button
                     className="btn btn-danger col-lg-3 my-2 mx-auto"
                     onClick={() => deletePost(post.id)}
                   >
                     Delete
                   </button>
-                  <button
+                  {/* <button
                     className="btn btn-outline-info col-lg-3 my-2 mx-auto"
                     data-toggle="modal"
                     data-target="#mymodal"
                     onClick={() => updateform(post)}
                   >
                     Update
-                  </button> */}
+                  </button>  */}
                   <Link
                     to={`/posts/${post.userId}`}
                     className="btn col-lg-3 my-2 btn-outline-dark mx-auto"
