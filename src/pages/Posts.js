@@ -184,6 +184,7 @@ export default function Posts() {
           {posts.map((post) => {
             return (
               <div
+                key={post.id}
                 className="card col-md-5 mx-auto mx-md-9 my-4 card-data"
                 style={{ width: "400px" }}
               >
