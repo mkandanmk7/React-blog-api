@@ -33,8 +33,12 @@ export default function Posts() {
       title: title,
       body: body,
     });
-    let tempPosts = [...posts];
+    let tempPosts = [...posts]; //copying post to tempPosts;
     console.log(post);
+    setPosts(tempPosts);
+    setUserId(""); //clear data after created
+    setBody("");
+    setTitle("");
   };
 
   //component Did Mount ();
@@ -57,6 +61,28 @@ export default function Posts() {
     setPosts(tempPosts);
   };
 
+  //update operation:
+
+  let updatePost = async () => {
+    const { data: put } = await axios.put(`${url}/${userId}`, {
+      userId: userId,
+      title: title,
+      body: body,
+    });
+    let tempPosts = [...posts];
+    let index = tempPosts.findIndex((p) => p.id === id); //finding index for which post need to be update
+    tempPosts[index] = put; //updating
+    setPosts(tempPosts); // change only updating part index ;
+  };
+  //updateform:
+
+  let updateForm = async (post) => {
+    setTitle(post.title);
+    setBody(post.body);
+    setUserId(post.userId);
+    setId(post.id);
+  };
+
   //handle change()
   let handleChange = ({ target: { name, value } }) => {
     if (name === "userId") setUserId(value);
@@ -66,7 +92,10 @@ export default function Posts() {
 
   let handleSubmit = (event) => {
     event.preventDefault();
-    // if(id==="")createPost();
+    if (id === "") createPosts();
+    else {
+      updatePost();
+    }
   };
 
   return (
@@ -176,14 +205,14 @@ export default function Posts() {
                   >
                     Delete
                   </button>
-                  {/* <button
+                  <button
                     className="btn btn-outline-info col-lg-3 my-2 mx-auto"
                     data-toggle="modal"
                     data-target="#mymodal"
-                    onClick={() => updateform(post)}
+                    onClick={() => updateForm(post)}
                   >
                     Update
-                  </button>  */}
+                  </button>
                   <Link
                     to={`/posts/${post.userId}`}
                     className="btn col-lg-3 my-2 btn-outline-dark mx-auto"
