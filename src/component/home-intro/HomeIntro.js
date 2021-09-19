@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as Intro } from "../../assets/undraw_programming_2svr.svg";
+// import { ReactComponent as Intro } from "../../assets/undraw_programming_2svr.svg";
 import { BsFillBootstrapFill } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
 import { SiReactrouter } from "react-icons/si";
@@ -27,11 +27,8 @@ export const HomeIntro = () => {
                   <div className="col-12 col-sm-12 col-md-5 col-lg-4 m-2">
                     <div className="card bootstrap-card">
                       <div className="tech-intro ">
-                        <BsFillBootstrapFill className="tech-logo" />{" "}
-                        <div className="tech-info align-middle">
-                          {" "}
-                          Bootstrap{" "}
-                        </div>
+                        <BsFillBootstrapFill className="tech-logo" />
+                        <div className="tech-info align-middle">Bootstrap</div>
                       </div>
                     </div>
                   </div>
@@ -39,7 +36,7 @@ export const HomeIntro = () => {
                   <div className="col-12 col-sm-12 col-md-5 col-lg-4 m-2">
                     <div className="card react-card">
                       <div className="tech-intro ">
-                        <FaReact className="tech-logo" />{" "}
+                        <FaReact className="tech-logo" />
                         <div className="tech-info align-middle"> React </div>
                       </div>
                     </div>
