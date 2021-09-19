@@ -10,8 +10,9 @@ import About from "./pages/About";
 import Posts from "./pages/Posts";
 import NotFound from "./pages/NotFound";
 import Header from "./component/header/Header";
-import PostView from "./component/post-view/PostView";
-import PostEdit from "./component/post-edit/PostEdit";
+import { Comment } from "./component/comments/Comment";
+// import PostView from "./component/post-view/PostView";
+// import PostEdit from "./component/post-edit/PostEdit";
 
 function App() {
   return (
@@ -23,10 +24,11 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/posts" component={Posts} />
-          <Route path="/posts/:postid" component={PostView} />
+          <Route path="/comments/:id" component={Comment} />
+          {/* <Route path="/posts/:postid" component={PostView} />
 
           <Route path="/post/edit/:postid" component={PostEdit} />
-          <Route path="/post/createpost" component={PostEdit} />
+          <Route path="/post/createpost" component={PostEdit} /> */}
           <Route path="/home">
             <Redirect to="/" />
           </Route>
