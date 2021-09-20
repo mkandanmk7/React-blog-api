@@ -39,6 +39,16 @@ export const Comment = ({ match }) => {
           <div className="userdata">
             <b>Name: </b> {user.name}
           </div>
+          {/* <div className="userdata">
+            <b>city: </b> {user.address.city}
+          </div> */}
+          {/* <div className="userdata">
+            <b>Company : </b> {user.company.name}
+          </div> */}
+          {/* <div className="userdata">
+            <b>Company:</b>
+            {user.company ? user.company.name : ""}
+          </div> */}
           <div className="userdata">
             <b>Email:</b> {user.email}
           </div>
@@ -46,7 +56,7 @@ export const Comment = ({ match }) => {
             <b>Contact :</b> {user.phone}
           </div>
           <div className="userdata">
-            {/* <b>Company : </b> {user.company.name} */}
+            <b>website :</b> {user.website}
           </div>
         </div>
       </div>
