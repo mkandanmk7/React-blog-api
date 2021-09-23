@@ -166,16 +166,21 @@ export default function Posts() {
                       onChange={handleChange}
                     ></textarea>
                   </div>
-                  <button
-                    className="btn btn-primary"
-                    data-dismiss="modal"
-                    onClick={handleSubmit}
-                  >
-                    Submit
-                  </button>
-                  <button className="btn btn-danger ml-3" data-dismiss="modal">
-                    Close
-                  </button>
+                  <div className="modal-footer d-flex justify-content-center">
+                    <button
+                      className="btn btn-primary"
+                      data-dismiss="modal"
+                      onClick={handleSubmit}
+                    >
+                      Submit
+                    </button>
+                    <button
+                      className="btn btn-danger ml-3"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -200,6 +205,7 @@ export default function Posts() {
                   </h5>
                   <p className="text-muted">{post.body}</p>
                 </div>
+
                 <div className="card-footer row">
                   <button
                     className="btn btn-danger col-lg-3 my-2 mx-auto"

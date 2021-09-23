@@ -2,7 +2,7 @@ import React from "react";
 import "./about.css";
 
 import Rename from "./Rename.jpg";
-console.log(Rename);
+// console.log(Rename);
 export const AboutMe = () => {
   return (
     <div className="container-fluid first">
