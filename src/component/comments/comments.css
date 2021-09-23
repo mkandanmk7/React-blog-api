@@ -1,0 +1,16 @@
+.profile {
+  width: 400px;
+  font-size: 1.3rem;
+  text-align: center;
+
+  margin: auto;
+
+  height: 200px;
+  transition: all 1s ease;
+}
+.profile:hover {
+  background: #000;
+  cursor: grab;
+  background: #000;
+  color: rgb(255, 255, 255);
+}
