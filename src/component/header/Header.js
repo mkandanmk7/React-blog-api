@@ -38,6 +38,15 @@ export default function Header() {
                 About
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                activeClassName="active"
+                className="nav-link"
+                to="/posts/3"
+              >
+                Comments
+              </NavLink>
+            </li>
           </ul>
         </div>
       </nav>

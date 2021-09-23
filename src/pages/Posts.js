@@ -19,8 +19,8 @@ export default function Posts() {
     const { data: users } = await axios.get(
       "https://jsonplaceholder.typicode.com/users"
     );
-    console.log(data);
-    console.log(users);
+    // console.log(data);// all posts in obj
+    // console.log(users); // all users
     setPosts(data);
     setUsers(users);
   };
@@ -44,7 +44,7 @@ export default function Posts() {
   //component Did Mount ();
 
   useEffect(() => {
-    console.log("Mounted");
+    // console.log("Mounted"); // first executed this.
     getPosts();
   }, []);
 
@@ -53,7 +53,7 @@ export default function Posts() {
     const { data } = await axios.delete(
       `https://jsonplaceholder.typicode.com/posts/${id}`
     );
-    console.log(data);
+    // console.log(data)
     let tempPosts = [...posts];
     tempPosts = tempPosts.filter((post) => {
       return post.id !== id;
@@ -85,9 +85,10 @@ export default function Posts() {
 
   //handle change()
   let handleChange = ({ target: { name, value } }) => {
-    if (name === "userId") setUserId(value);
-    if (name === "title") setTitle(value);
-    if (name === "body") setBody(value);
+    console.log(name, value);
+    if (name === "userId") setUserId(value); //state triggers id
+    if (name === "title") setTitle(value); // title
+    if (name === "body") setBody(value); // body
   };
 
   let handleSubmit = (event) => {

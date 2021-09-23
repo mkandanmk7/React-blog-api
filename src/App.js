@@ -23,8 +23,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/posts" component={Posts} />
-          <Route path="/comments/:id" component={Comment} />
+          <Route exact path="/posts" component={Posts} />
+          <Route path="/posts/:id" component={Comment} />
           {/* <Route path="/posts/:postid" component={PostView} />
 
           <Route path="/post/edit/:postid" component={PostEdit} />
