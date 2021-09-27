@@ -193,7 +193,7 @@ export default function Posts() {
             return (
               <div
                 key={post.id}
-                className="card col-md-5 mx-auto mx-md-9 my-4 card-data "
+                className="card col-md-5 mx-auto mx-md-9 my-4 card-data bg-success "
                 style={{ width: "400px" }}
               >
                 <div className="card-body">
@@ -205,7 +205,7 @@ export default function Posts() {
                   <h5>
                     <b>Body</b>
                   </h5>
-                  <p className="text-muted">{post.body}</p>
+                  <p className="text-white">{post.body}</p>
                 </div>
 
                 <div className="card-footer row">
