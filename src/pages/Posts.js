@@ -28,13 +28,15 @@ export default function Posts() {
   //createPost operation:
 
   let createPosts = async () => {
-    const { data: post } = await axios.post(url, {
+    const { data: newPost } = await axios.post(url, {
       userId: userId,
       title: title,
       body: body,
     });
+    console.log(newPost);
     let tempPosts = [...posts]; //copying post to tempPosts;
-    console.log(post);
+
+    tempPosts.push(newPost);
     setPosts(tempPosts);
     setUserId(""); //clear data after created
     setBody("");
@@ -50,14 +52,14 @@ export default function Posts() {
 
   //delele operation:
   let deletePost = async (id) => {
+    console.log(id);
     const { data } = await axios.delete(
       `https://jsonplaceholder.typicode.com/posts/${id}`
     );
-    // console.log(data)
+    console.log(data);
+
     let tempPosts = [...posts];
-    tempPosts = tempPosts.filter((post) => {
-      return post.id !== id;
-    });
+    tempPosts = tempPosts.filter((post) => post.id !== id);
     setPosts(tempPosts);
   };
 
@@ -222,7 +224,7 @@ export default function Posts() {
                     Update
                   </button>
                   <Link
-                    to={`/posts/${post.userId}`}
+                    to={`/posts/${post.id}`}
                     className="btn col-lg-3 my-2 btn-outline-dark mx-auto"
                   >
                     Comments
