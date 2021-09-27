@@ -201,10 +201,12 @@ export default function Posts() {
                     <b>Card:</b>
                     {post.id}
                   </div>
+                  <hr />
                   <h3>{post.title}</h3>
                   <h5>
                     <b>Body</b>
                   </h5>
+
                   <p className="text-white">{post.body}</p>
                 </div>
 
