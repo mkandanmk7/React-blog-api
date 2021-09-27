@@ -188,12 +188,12 @@ export default function Posts() {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row bg-light">
           {posts.map((post) => {
             return (
               <div
                 key={post.id}
-                className="card col-md-5 mx-auto mx-md-9 my-4 card-data"
+                className="card col-md-5 mx-auto mx-md-9 my-4 card-data  bg-secondary"
                 style={{ width: "400px" }}
               >
                 <div className="card-body">
