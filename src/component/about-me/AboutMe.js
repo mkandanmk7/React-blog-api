@@ -10,7 +10,7 @@ export const AboutMe = () => {
         <div className="col-6 col-sm-6 col-md-6 col-lg-12 text-center">
           <h1 className="text-start">
             <span>
-              <img className="profile" src={Rename} alt="profile" />
+              <img className="profo" src={Rename} alt="profile" />
             </span>
           </h1>
         </div>
@@ -27,7 +27,7 @@ export const AboutMe = () => {
             Education: <span className="text-info">BE CSE</span>
           </h3>
           <h3 className="text-start">
-            Current:{" "}
+            Current:
             <span className="text-info">Full stack web developer !</span>
           </h3>
         </div>

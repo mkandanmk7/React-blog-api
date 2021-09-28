@@ -27,7 +27,7 @@ export const Comment = ({ match }) => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  });
 
   return (
     <div className="container">
