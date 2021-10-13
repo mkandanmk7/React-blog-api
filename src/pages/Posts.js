@@ -50,16 +50,20 @@ export default function Posts() {
     getPosts();
   }, []);
 
+  let deleteId;
+  let getDeleteId = (id) => {
+    deleteId = id;
+  };
+
   //delele operation:
-  let deletePost = async (id) => {
-    console.log(id);
+  let deletePost = async () => {
     const { data } = await axios.delete(
-      `https://jsonplaceholder.typicode.com/posts/${id}`
+      `https://jsonplaceholder.typicode.com/posts/${deleteId}`
     );
     console.log(data);
 
     let tempPosts = [...posts];
-    tempPosts = tempPosts.filter((post) => post.id !== id);
+    tempPosts = tempPosts.filter((post) => post.id !== deleteId);
     setPosts(tempPosts);
   };
 
@@ -213,7 +217,9 @@ export default function Posts() {
                 <div className="card-footer row">
                   <button
                     className="btn btn-danger col-lg-3 my-2 mx-auto"
-                    onClick={() => deletePost(post.id)}
+                    data-toggle="modal"
+                    data-target="#deletemodal"
+                    onClick={() => getDeleteId(post.id)}
                   >
                     Delete
                   </button>
@@ -235,6 +241,27 @@ export default function Posts() {
               </div>
             );
           })}
+          <div className="modal  fade" id="deletemodal">
+            <div className="modal-dialog modal-lg">
+              <div className="modal-content">
+                <div className="modal-body">
+                  Are you sure, You want to delete User?
+                </div>
+                <div className="modal-footer">
+                  <button
+                    className="btn btn-danger"
+                    data-dismiss="modal"
+                    onClick={deletePost}
+                  >
+                    Delete
+                  </button>
+                  <button className="btn btn-info" data-dismiss="modal">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

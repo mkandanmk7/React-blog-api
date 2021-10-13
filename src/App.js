@@ -17,22 +17,16 @@ import { Comment } from "./component/comments/Comment";
 function App() {
   return (
     <div className="App text-center ">
-      {/* <TableBoots /> */}
       <Router>
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
           <Route exact path="/posts" component={Posts} />
           <Route path="/posts/:id" component={Comment} />
-          {/* <Route path="/posts/:postid" component={PostView} />
-
-          <Route path="/post/edit/:postid" component={PostEdit} />
-          <Route path="/post/createpost" component={PostEdit} /> */}
+          <Route path="/about" component={About} />
           <Route path="/home">
             <Redirect to="/" />
           </Route>
-
           <Route path="*" component={NotFound} />
         </Switch>
       </Router>
