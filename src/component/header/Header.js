@@ -6,11 +6,11 @@ import "./header.css";
 export default function Header() {
   return (
     <>
-      <nav className="navbar">
-        <div className="container-fluid">
+      <nav className="navbar ">
+        <div className="container-fluid fix">
           <span className="navbar-brand">
             <Link to="/">
-              <FcHome style={{ height: "50px", width: "50px" }} />
+              <FcHome style={{ height: "40px", width: "40px" }} />
             </Link>
           </span>
 

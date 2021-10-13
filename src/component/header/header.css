@@ -1,6 +1,12 @@
 .nav-item {
   cursor: pointer;
 }
+.fix {
+  position: fixed;
+  top: 0;
+
+  background: linear-gradient(to right, #ffc, #acd);
+}
 .nav-link {
   color: black !important;
   font-size: 1.3rem;

@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
+import "./Post.css";
 
 export default function Posts() {
   const url = "https://jsonplaceholder.typicode.com/posts";
@@ -192,7 +193,7 @@ export default function Posts() {
             </div>
           </div>
         </div>
-        <div className="row bg-light">
+        <div className="row bg">
           {posts.map((post) => {
             return (
               <div
