@@ -4,7 +4,7 @@ import { AboutMe } from "../component/about-me/AboutMe";
 
 export default function About() {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid  first">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 col-lg-6 nonImgDiv">
           <AboutMe />

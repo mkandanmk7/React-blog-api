@@ -1,15 +1,16 @@
 import React from "react";
-// import { ReactComponent as Intro } from "../../assets/undraw_programming_2svr.svg";
+import "./homeIntro.css";
 import { BsFillBootstrapFill } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
 import { SiReactrouter } from "react-icons/si";
 import { RiReactjsLine } from "react-icons/ri";
+import CodeImg from "../../assets/code.jpg";
 
 export const HomeIntro = () => {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid mt-5">
       <div className="row">
-        <div className="col-12 col-sm-12 col-md-6 col-lg-6 nonImgDiv">
+        <div className=" col-sm-12 col-md-6 col-lg-6 nonImgDiv">
           <div className="container">
             <div className="row">
               <div className="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -45,10 +46,9 @@ export const HomeIntro = () => {
                   <div className="col-12 col-sm-12 col-md-12 col-lg-4 m-2">
                     <div className="card router-card">
                       <div className="tech-intro ">
-                        <SiReactrouter className="tech-logo" />{" "}
+                        <SiReactrouter className="tech-logo" />
                         <div className="tech-info align-middle">
-                          {" "}
-                          react-router-dom{" "}
+                          react-router-dom
                         </div>
                       </div>
                     </div>
@@ -57,10 +57,9 @@ export const HomeIntro = () => {
                   <div className="col-12 col-sm-12 col-md-12 col-lg-4 m-2">
                     <div className="card icon-card">
                       <div className="tech-intro ">
-                        <RiReactjsLine className="tech-logo react-icons-logo" />{" "}
+                        <RiReactjsLine className="tech-logo react-icons-logo" />
                         <div className="tech-info align-middle">
-                          {" "}
-                          react-icons{" "}
+                          react-icons
                         </div>
                       </div>
                     </div>
@@ -71,9 +70,9 @@ export const HomeIntro = () => {
           </div>
         </div>
 
-        {/* <div className="col-6 col-sm-6 col-md-6 col-lg-6 imgDiv">
-          <Intro style={{ width: "100%" }} />
-        </div> */}
+        <div className="col-6 col-sm-12 col-md-6 col-lg-6 codeimg">
+          <img src={CodeImg} alt="coding" className="code" />
+        </div>
       </div>
     </div>
   );

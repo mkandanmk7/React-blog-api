@@ -2,11 +2,13 @@
   margin-top: 30px;
 }
 .bg {
-  background: rgb(166, 228, 236);
+  background: url(../assets/postbg.jpg);
 }
+
 .card-body {
-  box-shadow: 5px 10px 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(14, 100%, 53%, 0.4);
   border-radius: 10px;
   margin-top: 10px;
-  background: rgb(226, 163, 228);
 }

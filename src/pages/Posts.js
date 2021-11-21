@@ -198,7 +198,7 @@ export default function Posts() {
             return (
               <div
                 key={post.id}
-                className="card col-md-5 mx-auto mx-md-9 my-4 card-data bg-success "
+                className="card col-md-5 mx-auto mx-md-9 my-4 card-data post_wrapper "
                 style={{ width: "400px" }}
               >
                 <div className="card-body">
