@@ -1,6 +1,6 @@
 # Responsive React CRUD POST Application .
 
-` Deployed LInk`
+` Deployed Link`
 
 - [click here](https://react-blog-all.netlify.app/).
 
